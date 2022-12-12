@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+}
+.search-link {
+  position: absolute;
+  left: 85px;
+  top: 85px;
+}
+.nav-title {
+  /* BAHADUOR */
+  cursor: pointer;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+  letter-spacing: 0.18em;
+
+  color: #ffffff;
+}
+.title-link {
+  margin-top: 85px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.connect-link {
+  position: absolute;
+  top: 85px;
+  right: 90px;
+}

@@ -1,0 +1,47 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.music-div svg {
+  position: absolute;
+  bottom: 85px;
+  right: 100px;
+}
+
+.social-link {
+  position: absolute;
+  bottom: 85px;
+  left: 95px;
+}
+
+.link-below a {
+  margin-bottom: 31px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link-below svg {
+  margin-bottom: 71px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-down-footer {
+    /* Vector */
+
+width: 18px;
+height: 8.82px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
