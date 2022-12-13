@@ -1,0 +1,67 @@
+.AboutContainer {
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.AboutImg{
+  background-image: url(../../Assets/Images/image.png);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AboutForm {
+  top: 25%;
+  width: 565px;
+  height: 255px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AboutText {
+  width: 900px;
+  height: 72px;
+  line-height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AboutTitle {
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AboutDescription {
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: 0.18em;
+  width: 450px;
+  top: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.AboutButton {
+  bottom: -70px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

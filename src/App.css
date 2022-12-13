@@ -1,9 +1,18 @@
+* {
+  overflow: none;
+}
 body {
   font-family: "Red Hat Display";
   background: #000000;
+  text-transform: uppercase;
+}
+ul {
+  list-style: none;
+  text-decoration: none;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: #9b9b9b;
   font-family: "Red Hat Display";
@@ -17,13 +26,44 @@ a:hover {
   font-size: 12px;
 }
 
-.homePage {
-  width: 100%;
+span {
+  font-size: 9px;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  position: absolute;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

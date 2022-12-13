@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .music-div svg {
@@ -31,17 +31,15 @@
 }
 
 .arrow-down-footer {
-    /* Vector */
+  /* Vector */
 
-width: 18px;
-height: 8.82px;
+  width: 18px;
+  height: 8.82px;
 
-background: #FFFFFF;
+  background: #ffffff;
 
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-

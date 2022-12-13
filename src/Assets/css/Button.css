@@ -1,0 +1,16 @@
+.ButtonContainer {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  width: 210px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ButtonText {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

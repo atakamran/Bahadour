@@ -1,9 +1,8 @@
 import React from "react";
 
 import "../Assets/css/header.css";
-import MenuComp from "./MenuComp";
 
-// import { ReactComponent as Logo } from "../Assets/Logo/logo.svg";
+import { ReactComponent as Logo } from "../Assets/Logo/NavLogo.svg";
 
 const Navbar = () => {
   return (
@@ -13,13 +12,18 @@ const Navbar = () => {
           <a href="asdasd">search</a>
         </div>
         <div className="title-link">
-          <span className="nav-title">Bahadour</span>
+          {window.location.pathname === "/" ? (
+            <span className="nav-title">Bahadour</span>
+          ) : (
+            <div className="NavLogo">
+              <Logo />
+            </div>
+          )}
         </div>
         <div className="connect-link">
           <a href="asdasd">connect</a>
         </div>
       </div>
-      <MenuComp />
     </>
   );
 };
