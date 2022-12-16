@@ -1,14 +1,26 @@
 import React from "react";
-import Footer from "../../Components/Footer";
-import MenuComp from "../../Components/MenuComp";
+import ProductsComp from "../../Components/Products";
 import "./Products.css";
 
 const Products = () => {
   return (
     <>
-      <div className="ProductsContainer"></div>
-      <MenuComp Menu="Coopration" />
-      <Footer Below={"PRODUCTS"} BelowLink={"/Products"} />
+      <div className="ProductsSection" id="Products">
+        <div className="ProductsContainer">
+          <div className="ProductsDiv">
+            <div className="ProductsFilter">
+              <span className="ProductsFilterTitle ">MOST RECENT</span>
+              <span className="ProductsFilterTitle ">provisions</span>
+              <span className="ProductsFilterTitle ">SHOW ALL</span>
+            </div>
+            <div className="ProductsList">
+              <ProductsComp />
+              {/* <ProductsComp />
+              <ProductsComp /> */}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

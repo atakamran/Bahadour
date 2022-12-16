@@ -1,0 +1,12 @@
+.InstagramComp {
+  margin-right: 33px;
+}
+.TwitterComp {
+  margin-left: 33px;
+}
+.BehanceComp {
+    
+}
+.BehanceComp svg , .TwitterComp svg , .InstagramComp svg {
+  cursor: pointer;
+}

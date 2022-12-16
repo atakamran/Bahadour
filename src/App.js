@@ -6,19 +6,28 @@ import Navbar from "./Components/Navbar";
 
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
-import ProjectsPage from "./Pages/Projects/ProjectsPage";
+import Projects from "./Pages/Projects/Projects";
+import Coopration from "./Pages/Coopration/Coopration";
+import Products from "./Pages/Products/Products";
+import Contact from "./Pages/Contact/Contact";
+// import { useEffect } from "react";
 
 function App() {
+  // const hashs = []
+  // useEffect()
   return (
     <div className="App">
       <Navbar />
       <>
         <Home />
         <About />
-        <ProjectsPage />
+        <Projects />
+        <Coopration />
+        <Products />
+        <Contact />
       </>
       <MenuComp Menu={"About"} />
-      <Footer Below={"PROJECTs"} BelowLink={"/Projects"} />
+      <Footer Below={"ALL RIGHTS RESERVED"} BelowLink={"#Projects"} />
     </div>
   );
 }

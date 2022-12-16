@@ -2,7 +2,7 @@ import React from "react";
 
 import "../Assets/css/header.css";
 
-import { ReactComponent as Logo } from "../Assets/Logo/NavLogo.svg";
+import { ReactComponent as NavLogo } from "../Assets/Logo/NavLogo.svg";
 
 const Navbar = () => {
   return (
@@ -13,10 +13,13 @@ const Navbar = () => {
         </div>
         <div className="title-link">
           {window.location.pathname === "/" ? (
-            <span className="nav-title">Bahadour</span>
+            // <span className="nav-title">Bahadour</span>
+            <div className="NavLogo">
+              <NavLogo />
+            </div>
           ) : (
             <div className="NavLogo">
-              <Logo />
+              <NavLogo />
             </div>
           )}
         </div>

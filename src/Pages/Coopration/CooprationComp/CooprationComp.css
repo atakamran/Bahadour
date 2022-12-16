@@ -1,0 +1,87 @@
+.CooprationCompContainer {
+  width: 756px;
+  height: Hug (127px);
+}
+.CooprationCompTitle {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.33em;
+}
+.CooprationCompDesc {
+  margin-top: 30px;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: 0.18em;
+}
+.CoopButton {
+  padding-top: 75px;
+}
+.CooprationForm {
+  width: 756px;
+  height: 156px;
+}
+.CoopForm input {
+  color: #fff;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 9px;
+  line-height: 12px;
+  /* identical to box height */
+
+  letter-spacing: 0.18em;
+  border: 0;
+  outline: 0;
+}
+.CoopEmail {
+  position: absolute;
+  display: flex;
+  justify-content: start;
+}
+.CoopEmail input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.CoopSUBJECT {
+  position: absolute;
+  margin-left: 387px;
+}
+.CoopSUBJECT input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.CoopBRAND {
+  position: absolute;
+  margin-top: 87px;
+}
+.CoopBRAND input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.CoopMESSAGE {
+  position: absolute;
+  margin-left: 387px;
+  margin-top: 87px;
+}
+.CoopMESSAGE input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}

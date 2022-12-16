@@ -1,5 +1,8 @@
 * {
   overflow: none;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
 }
 body {
   font-family: "Red Hat Display";

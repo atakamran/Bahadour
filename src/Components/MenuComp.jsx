@@ -9,67 +9,74 @@ function MenuComp({ Menu }) {
   };
   return (
     <>
-      <div className="MenuComp" onClick={() => toggleTab(1)}>
-        <div className="menu-frame">
+      <div className="MenuComp">
+        <div
+          className={toggleState === 1 ? "CloseMenu OffMenu" : "CloseMenu"}
+          onClick={() => toggleTab(0)}
+        >
+          <svg
+            width="51"
+            height="51"
+            viewBox="0 0 51 51"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M28.9707 30.2158H31.4557L27.4207 26.1808L26.3657 27.6108L28.9707 30.2158Z"
+              fill="white"
+            />
+            <path
+              d="M28.9708 20.6958L25.4558 24.2158L21.9408 20.6958H19.4558L24.2158 25.4558L19.4558 30.2158H21.9408L31.4558 20.6958H28.9708Z"
+              fill="white"
+            />
+            <rect
+              x="25.4558"
+              y="2.12132"
+              width="33"
+              height="33"
+              transform="rotate(45 25.4558 2.12132)"
+              stroke="white"
+              stroke-width="3"
+            />
+          </svg>
+        </div>
+        <div
+          className={toggleState === 1 ? "menu-frame off-svg" : "menu-frame"}
+          onClick={() => toggleTab(1)}
+        >
           <div className="top-svg"></div>
           <div className="mid-svg"></div>
           <div className="botton-svg"></div>
           <span className="menu-title">{Menu}</span>
         </div>
       </div>
+
       <div
-        className={
-          toggleState === 1 ? "AboutModal activeModal" : "AboutModal"
-        }
+        className={toggleState === 1 ? "AboutModal activeModal" : "AboutModal"}
       >
         <div className="MenuForm">
           <div className="MenuList">
-            <a href="/">
+            <a href="#">
               <span className="MenuItem">HOME</span>
             </a>
-            <a href="/About">
+            <a href="#About">
               <span className="MenuItem">ABOUT ME</span>
             </a>
-            <a href="/Projects">
+            <a href="#Projects">
               <span className="MenuItem">PROJECTS</span>
             </a>
-            <a href="/Unity">
+            <a href="#Unity">
               <span className="MenuItem">UNITY</span>
             </a>
-            <a href="/Products">
+            <a href="#Products">
               <span className="MenuItem">PRODUCTS</span>
             </a>
-            <a href="/Contact">
+            <a href="#Contact">
               <span className="MenuItem">CONTACT</span>
             </a>
           </div>
         </div>
       </div>
-      {/* <svg
-        width="52"
-        height="51"
-        viewBox="0 0 52 51"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M29.3338 30.2158H31.8188L27.7838 26.1808L26.7288 27.6108L29.3338 30.2158Z"
-          fill="white"
-        />
-        <path
-          d="M29.3338 20.6959L25.8188 24.2159L22.3038 20.6959H19.8188L24.5788 25.4559L19.8188 30.2159H22.3038L31.8188 20.6959H29.3338Z"
-          fill="white"
-        />
-        <rect
-          x="25.8188"
-          y="2.12132"
-          width="33"
-          height="33"
-          transform="rotate(45 25.8188 2.12132)"
-          stroke="white"
-          stroke-width="3"
-        />
-      </svg> */}
     </>
   );
 }
