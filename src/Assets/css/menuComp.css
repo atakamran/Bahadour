@@ -109,16 +109,52 @@
   height: 100%;
   justify-content: center;
   align-items: center;
-  display: none;
-}
-.menu-frame {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  scale: 0;
 }
 .OffMenu {
-  display: flex;
+  opacity: 1;
   position: absolute;
   z-index: 1000;
+  scale: 1;
 }
 .off-svg {
   opacity: 0;
-  transform: translateX(-50px);
+  scale: 0;
+}
+.MenuComp:hover .MenuSX {
+  fill: white;
+}
+.MenuComp:hover .MenuSQ,
+.MenuComp:hover .MenuFX {
+  fill: black;
+  stroke: black;
+}
+.MenuSX {
+  fill: black;
+  stroke: white;
+  transition: all 0.5s ease-in-out;
+}
+.MenuSQ {
+  fill: white;
+  stroke: white;
+  transition: all 0.5s ease-in-out;
+}
+.MenuFX {
+  fill: white;
+  stroke: white;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 430px) {
+  .MenuComp {
+    display: flex;
+    position: fixed;
+    margin-top: 37px;
+    left: 55px;
+    height: 100%;
+  }
+  .menu-title {
+    display: none;
+  }
 }

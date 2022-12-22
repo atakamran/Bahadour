@@ -10,10 +10,11 @@ import Projects from "./Pages/Projects/Projects";
 import Coopration from "./Pages/Coopration/Coopration";
 import Products from "./Pages/Products/Products";
 import Contact from "./Pages/Contact/Contact";
+
 // import { useEffect } from "react";
 
 function App() {
-  // const hashs = []
+  const hashs = ["#Home", "#About", "#Projects", "#Unity", "#Contact"];
   // useEffect()
   return (
     <div className="App">
@@ -27,7 +28,7 @@ function App() {
         <Contact />
       </>
       <MenuComp Menu={"About"} />
-      <Footer Below={"ALL RIGHTS RESERVED"} BelowLink={"#Projects"} />
+      <Footer Below={"About me"} BelowLink={"#Projects"} />
     </div>
   );
 }

@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import "../Assets/css/footer.css";
+import "../Assets/css/BarAnimation.css";
+
+import Song from "../Assets/Afraid.flac";
 
 function Footer({ Below, BelowLink, FooterArrow }) {
+  const [toggleState, setToggleState] = useState(0);
+  const [pauseToggle, setpauseToggle] = useState(false);
+
+  const music = new Audio(Song);
+  console.log(music);
+  let isPlaying = false;
+
+  const player = () => {
+    pauseToggle ? setpauseToggle(false) : setpauseToggle(true);
+    if (isPlaying) {
+      music.pause();
+      isPlaying = false;
+    } else {
+      music.play();
+      isPlaying = true;
+    }
+  };
+
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
+
   const ArrowUp = (
     <svg
       width="13"
@@ -32,10 +57,54 @@ function Footer({ Below, BelowLink, FooterArrow }) {
       />
     </svg>
   );
+
   const CopyWrite = <span>© 2022</span>;
+
   return (
     <>
       <div className="footer">
+        <div className="Social-Footer-Svg">
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="37.2426"
+              y="25.7574"
+              width="6"
+              height="6"
+              transform="rotate(45 37.2426 25.7574)"
+              fill="#696969"
+            />
+            <rect
+              x="22.7574"
+              y="25.7574"
+              width="6"
+              height="6"
+              transform="rotate(45 22.7574 25.7574)"
+              fill="#696969"
+            />
+            <rect
+              x="34.2426"
+              y="37.2426"
+              width="6"
+              height="6"
+              transform="rotate(135 34.2426 37.2426)"
+              fill="#696969"
+            />
+            <rect
+              x="34.2426"
+              y="22.7574"
+              width="6"
+              height="6"
+              transform="rotate(135 34.2426 22.7574)"
+              fill="#696969"
+            />
+          </svg>
+        </div>
         <div className="social-link">
           <a href="#contact">social</a>
         </div>
@@ -45,7 +114,11 @@ function Footer({ Below, BelowLink, FooterArrow }) {
             <div className="footerArrow">{ArrowDown}</div>
           </div>
         </a>
-        <div className="music-div">
+        <div
+          className="music-div"
+          onClick={toggleState === 0 ? () => toggleTab(1) : () => toggleTab(0)}
+        >
+          {/* <audio id="tah_audio" autoPlay="true" loop="loop" src={Song}></audio> */}
           <svg
             width="60"
             height="60"
@@ -53,9 +126,30 @@ function Footer({ Below, BelowLink, FooterArrow }) {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect x="19.5" y="18" width="3" height="24" fill="#D9D9D9" />
-            <rect x="28.5" y="25.5" width="3" height="9" fill="#D9D9D9" />
-            <rect x="37.5" y="22.5" width="3" height="15" fill="#D9D9D9" />
+            <rect
+              id={toggleState === 1 ? "OffMusic" : "loading-bar-left"}
+              x="19.5"
+              y="28.5"
+              width="3"
+              height="3"
+              fill="#D9D9D9"
+            />
+            <rect
+              id={toggleState === 1 ? "OffMusic" : "loading-bar-middle"}
+              x="28.5"
+              y="28.5"
+              width="3"
+              height="3"
+              fill="#D9D9D9"
+            />
+            <rect
+              id={toggleState === 1 ? "OffMusic" : "loading-bar-right"}
+              x="37.5"
+              y="28.5"
+              width="3"
+              height="3"
+              fill="#D9D9D9"
+            />
           </svg>
         </div>
       </div>

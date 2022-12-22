@@ -5,11 +5,25 @@
   justify-content: center;
   align-items: center;
 }
-
 .ButtonText {
   cursor: pointer;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.ButtonContainer:hover .ButtonPath,
+.ButtonContainer:hover {
+  color: black;
+  fill: white;
+  fill-opacity: 1;
+}
+.ButtonPath {
+  transform-origin: center;
+  fill-opacity: 0;
+  fill: white;
+  transition: all 0.5s ease-in-out;
+}
+.ButtonPath path {
+  transform-origin: bottom;
 }

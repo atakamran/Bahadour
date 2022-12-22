@@ -1,42 +1,39 @@
 .CooprationContainer {
-  width: 100%;
+  min-width: 100vh;
   height: 100vh;
-  position: relative;
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: white;
+  overflow: hidden;
+}
+
+/*  */
+
+.NavArrows {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .LeftArrow {
-  padding-right: 60%;
-  padding-top: 2%;
   position: absolute;
+  z-index: 55;
+  bottom: 0;
+  right: 80%;
+  margin-top: 17.5%;
 }
 .LeftArrow svg {
   cursor: pointer;
 }
 .RightArrow svg {
   cursor: pointer;
-  z-index: 55;
 }
 .RightArrow {
-  padding-left: 60%;
-  padding-top: 2%;
   position: absolute;
-}
-.CooprationDot {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.CooprationDiv {
-
-}
-.CoopCompDiv {
-  
-}
-.hideCooprationComp {
-  opacity: 0;
-  transition: all 0.5s ease-in;
-  visibility: none;
-  display: none;
+  z-index: 55;
+  bottom: 0;
+  left: 80%;
+  margin-top: 17.5%;
 }

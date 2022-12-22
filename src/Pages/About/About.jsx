@@ -5,7 +5,7 @@ import Button from "../../Components/Button";
 const About = () => {
   return (
     <>
-      <div className="AboutContainer">
+      <div className="AboutContainer" id="About">
         <div className="AboutImg">
           <div className="AboutForm">
             <div className="AboutText">
@@ -16,7 +16,7 @@ const About = () => {
                 skills in these areas when producing great projects.
               </p>
               <div className="AboutButton">
-                <Button ButtonText={"Coopration"} ButtonLink={"/Unity"} />
+                <Button ButtonText={"Coopration"} ButtonLink={"#Unity"} />
               </div>
             </div>
           </div>

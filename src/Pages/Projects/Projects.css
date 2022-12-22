@@ -1,3 +1,12 @@
+.ProjectCloud {
+  position: absolute;
+  width: 501px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  background: linear-gradient(90deg, #000000 32.73%, rgba(0, 0, 0, 0) 100%);
+}
 .ProjectsContainer {
   min-width: 100%;
   min-height: 100vh;
@@ -7,29 +16,20 @@
   align-items: center;
 }
 .ProjectsItems {
-  margin-left: 15%;
-  justify-content: space-between;
+  position: absolute;
+  justify-content: center;
   display: flex;
   overflow: hidden;
   user-select: none;
+  width: 100%;
 }
 .ProjectsDiv {
   width: 818px;
   height: 516px;
   justify-content: center;
   align-items: center;
-  margin-left: 60px;
   cursor: pointer;
   z-index: 5;
-}
-.ProjectCloud {
-  position: absolute;
-  width: 501px;
-  height: 1080px;
-  left: 0px;
-  top: 0px;
-  z-index: 10;
-  background: linear-gradient(90deg, #000000 32.73%, rgba(0, 0, 0, 0) 100%);
 }
 .ProjectDetails {
   display: flex;
@@ -56,4 +56,9 @@
 }
 .ProjectImage:hover {
   transform: scale(1.02);
+}
+@media screen and (max-width: 430px) {
+  .ProjectCloud {
+    display: none;
+  }
 }

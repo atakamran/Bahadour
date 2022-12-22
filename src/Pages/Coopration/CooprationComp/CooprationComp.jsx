@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./CooprationComp.css";
 
 import Button from "../../../Components/Button";
 
 const CooprationComp = () => {
+  
+  const ref = useRef(null);
+
   return (
     <div className="CooprationCompContainer">
       <div className="CooprationCompTitle">COOPERTAION METHOD</div>
@@ -47,15 +50,24 @@ const CooprationComp = () => {
         </svg>
       </div>
       <div className="CooprationForm">
-        <form className="CoopForm">
+        <form className="CoopForm" autoComplete="off">
           <div className="CoopEmail">
-            <input type="email" name="email" placeholder="EMAIL" />
+            <input
+              type="email"
+              name="email"
+              placeholder="EMAIL"
+              ref={ref}
+              autoComplete="off"
+            />
             <svg
               width="369"
               height="69"
               viewBox="0 0 369 69"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className={
+                document.activeElement === ref.current ? "InputStroke" : null
+              }
             >
               <path
                 d="M367.5 53.3787V1.5H37.7989L2.5032 67.5H353.379L367.5 53.3787Z"
@@ -78,7 +90,13 @@ const CooprationComp = () => {
             </svg>
           </div>
           <div className="CoopSUBJECT">
-            <input type="text" name="subject" placeholder="SUBJECT" />
+            <input
+              type="text"
+              name="subject"
+              placeholder="SUBJECT"
+              ref={ref}
+              autoComplete="off"
+            />
             <svg
               width="369"
               height="69"
@@ -107,7 +125,13 @@ const CooprationComp = () => {
             </svg>
           </div>
           <div className="CoopBRAND">
-            <input type="text" name="brand" placeholder="BRAND" />
+            <input
+              type="text"
+              name="brand"
+              placeholder="BRAND"
+              ref={ref}
+              autoComplete="off"
+            />
             <svg
               width="369"
               height="69"
@@ -136,7 +160,13 @@ const CooprationComp = () => {
             </svg>
           </div>
           <div className="CoopMESSAGE">
-            <input type="text" name="message" placeholder="MESSAGE" />
+            <input
+              type="text"
+              name="message"
+              placeholder="MESSAGE"
+              ref={ref}
+              autoComplete="off"
+            />
             <svg
               width="369"
               height="69"

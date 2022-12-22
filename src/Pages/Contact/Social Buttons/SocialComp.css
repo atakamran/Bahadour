@@ -5,8 +5,34 @@
   margin-left: 33px;
 }
 .BehanceComp {
-    
 }
-.BehanceComp svg , .TwitterComp svg , .InstagramComp svg {
+.BehanceComp svg,
+.TwitterComp svg,
+.InstagramComp svg {
   cursor: pointer;
+}
+.SocialStroke {
+  transition: all 0.5s ease-in-out;
+}
+.buttonFill {
+  transition: all 0.5s ease-in-out;
+  fill: rgba(0, 0, 0, 0);
+}
+.followSocial {
+  transition: all 0.5s ease-in-out;
+}
+.BehanceComp:hover .SocialStroke,
+.TwitterComp:hover .SocialStroke,
+.InstagramComp:hover .SocialStroke {
+  stroke: white;
+}
+.BehanceComp:hover .buttonFill,
+.TwitterComp:hover .buttonFill,
+.InstagramComp:hover .buttonFill {
+  fill: white;
+}
+.BehanceComp:hover .followSocial,
+.TwitterComp:hover .followSocial,
+.InstagramComp:hover .followSocial {
+  fill: black;
 }

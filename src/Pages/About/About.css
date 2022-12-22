@@ -37,7 +37,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .AboutTitle {
   font-size: 12px;
   line-height: 16px;
@@ -64,4 +63,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 430px) {
+  .AboutDescription {
+    width: 300px;
+    height: Hug (102px);
+  }
 }

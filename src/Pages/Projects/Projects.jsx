@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import ProjectItems from "./ProjectsItems";
+import CarouselProject from "./CarouselProject";
 
 import "./Projects.css";
 
-import ProjectItems from "./ProjectsItems";
-
-const Projects = () => {
+const Projects = (props) => {
   const data = ProjectItems;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselInfiniteScroll = () => {
     if (currentIndex === data.length - 1) {
@@ -24,21 +24,16 @@ const Projects = () => {
 
   return (
     <>
-      <motion.div className="ProjectsContainer" id="Projects">
+      <div className="ProjectsContainer" id="Projects">
         <div className="ProjectCloud"></div>
-        <motion.div className="ProjectsItems">
-          {data.map((item, index) => {
-            return (
-              <motion.div
-                style={{ transform: `translate(-${currentIndex * 100}%)`, transition: "all 1s ease-in-out" }}
-                key={index}
-              >
-                {item}
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </motion.div>
+        <div className="ProjectsItems">
+          <CarouselProject>
+            {data.map((item, index) => {
+              return <div key={index}>{item}</div>;
+            })}
+          </CarouselProject>
+        </div>
+      </div>
     </>
   );
 };

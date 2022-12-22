@@ -38,3 +38,44 @@
   top: 85px;
   right: 90px;
 }
+.reveal {
+  opacity: 1;
+}
+.reveal.active {
+  transition: all 1s ease-in-out;
+  position: absolute;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.ConnectIcon {
+  display: none;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 430px) {
+  .nav-title {
+    top: 60px;
+  }
+  .ConnectIcon {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    top: 45px;
+  }
+  .connect-link {
+    display: none;
+  }
+  .search-link {
+    display: none;
+  }
+}

@@ -1,36 +1,30 @@
-.ProductsSection {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-.ProductsContainer {
-  position: absolute;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-.ProductsList {
-}
-.ProductsFilter {
-  color: #fff;
-}
-.ProductsDiv {
-  position: relative;
-  height: 600px;
-  width: 918px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .ProductsFilter {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding-bottom: 55px;
+  bottom: 55px;
+}
+.ProductsSection {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ProductsList {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.ProductsFilter {
+  color: #fff;
 }
 .ProductsFilter span {
   cursor: pointer;
@@ -38,8 +32,12 @@
 .Products {
   position: relative;
   display: flex;
+  width: 818px;
+  height: 516px;
 }
-.Products:hover .ProductButton,.Products:hover  .ProductText2,.Products:hover  .ProductText4 {
+.Products:hover .ProductButton,
+.Products:hover .ProductText2,
+.Products:hover .ProductText4 {
   opacity: 1;
 }
 .ProductButton {
@@ -59,7 +57,7 @@
   cursor: pointer;
 }
 .Products img {
-  position: relative;
+  position: absolute;
   display: flex;
   width: 100%;
   height: 100%;
@@ -72,7 +70,6 @@
   background: rgba(0, 0, 0, 0.69);
   z-index: 1000;
 }
-
 .ProductText {
   position: absolute;
   display: flex;
@@ -81,7 +78,6 @@
   align-items: center;
   justify-content: space-between;
   text-align: start;
-  /* flex-direction: column; */
 }
 .ProductDescDiv {
   text-align: end;
@@ -89,19 +85,45 @@
 .ProductText span {
   font-size: 11px;
   line-height: 15px;
-  /* identical to box height */
-
   letter-spacing: 0.18em;
   margin-left: 80px;
   margin-right: 80px;
-
   color: #ffffff;
 }
 .ProductText2 {
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   opacity: 0;
+  position: absolute;
 }
 .ProductText4 {
-  transition: all .5s ease-in;
+  transition: all 0.5s ease-in;
   opacity: 0;
+}
+.DetailsStroke {
+  transition: all 0.5s ease-in;
+  color: rgba(0, 0, 0, 0);
+}
+.DetailsFill {
+  transition: all 0.5s ease-in;
+  transform-origin: center;
+}
+.ProductDetails:hover .DetailsStroke {
+  fill: white;
+}
+.ProductDetails:hover .DetailsFill {
+  fill: black;
+  scale: 1.1;
+}
+.AddFill {
+  transition: all 0.5s ease-in-out;
+  transform-origin: center;
+}
+.AddStroke {
+}
+.ProductAdd:hover .AddFill {
+  fill: black;
+  scale: 1.1;
+}
+.ProductAdd:hover .AddStroke {
+  fill: white;
 }
