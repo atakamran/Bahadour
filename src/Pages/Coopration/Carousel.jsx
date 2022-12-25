@@ -24,6 +24,33 @@ const Carousel = (props) => {
     }
   };
 
+  const [touchPosition, setTouchPosition] = useState(null);
+  // ...
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      next();
+    }
+
+    if (diff < -5) {
+      prev();
+    }
+
+    setTouchPosition(null);
+  };
+
   return (
     <div className="carousel-container">
       <div className="NavArrows">
@@ -59,7 +86,11 @@ const Carousel = (props) => {
         </div>
       </div>
       <div className="carousel-wrapper">
-        <div className="carousel-content-wrapper">
+        <div
+          className="carousel-content-wrapper"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           <div
             className="carousel-content"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}

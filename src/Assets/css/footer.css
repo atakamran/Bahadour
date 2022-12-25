@@ -7,7 +7,7 @@
 .music-div svg {
 }
 .music-div {
-  z-index: 1201;
+  z-index: 1000;
   bottom: 75px;
   right: 90px;
   cursor: pointer;
@@ -18,9 +18,11 @@
   bottom: 85px;
   left: 95px;
 }
+.link-below {
+  z-index: 1;
+}
 .link-below a {
   margin-bottom: 31px;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

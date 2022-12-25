@@ -4,7 +4,7 @@
   height: 100%;
   left: 0px;
   top: 0px;
-  z-index: 10;
+  z-index: 200;
   background: linear-gradient(90deg, #000000 32.73%, rgba(0, 0, 0, 0) 100%);
 }
 .ProjectsContainer {
@@ -14,9 +14,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 .ProjectsItems {
-  position: absolute;
+  position: relative;
   justify-content: center;
   display: flex;
   overflow: hidden;
@@ -29,7 +30,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
 }
 .ProjectDetails {
   display: flex;
@@ -51,14 +52,31 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   top: 40px;
   transition: all 0.25s ease-in;
 }
 .ProjectImage:hover {
   transform: scale(1.02);
 }
+.ProjectsContainer .carousel-container .NavArrows .LeftArrow {
+  right: 82.5%;
+}
+.ProjectsContainer .carousel-container .NavArrows .RightArrow {
+  left: 82.5%;
+}
 @media screen and (max-width: 430px) {
   .ProjectCloud {
     display: none;
+  }
+  .ProjectsContainer .carousel-container .NavArrows {
+    display: none;
+  }
+  .ProjectsText {
+    display: none;
+  }
+  .ProjectsDiv {
+    height: 525px;
+    width: 351px;
   }
 }

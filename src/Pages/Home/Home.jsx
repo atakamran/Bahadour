@@ -12,6 +12,7 @@ const Home = () => {
           id="content_video"
           className="videoFile"
           autoplay="true"
+          controls="false"
           src={VID}
           loop
         />

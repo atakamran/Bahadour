@@ -1,5 +1,5 @@
 .CooprationCompContainer {
-  height: Hug (127px);
+  height: 150vh;
   width: 100%;
   justify-content: center;
   display: flex;
@@ -49,7 +49,7 @@
 .CoopEmail {
   position: absolute;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 .CoopEmail input {
   position: absolute;
@@ -95,4 +95,63 @@
   left: 40px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
+}
+.MobileCompany {
+  display: none;
+}
+.MobilePayment {
+  display: none;
+}
+@media screen and (max-width: 430px) {
+  .CooprationCompDesc {
+    display: none;
+  }
+  .CooprationCompTitle {
+    top: 5%;
+    position: absolute;
+  }
+  .CooprationDot {
+    top: 5%;
+    position: absolute;
+  }
+  .ButtonPath {
+    bottom: 0;
+    position: absolute;
+  }
+  .CooprationForm {
+    width: Hug (369px);
+    height: Hug (348px);
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: start;
+    justify-content: center;
+  }
+  .CoopEmail {
+    top: 15%;
+    left: 3%;
+  }
+  .CoopSUBJECT {
+    right: 3%;
+    top: 25%;
+  }
+  .CoopBRAND {
+    left: 3%;
+    top: 25%;
+  }
+  .CoopMESSAGE {
+    right: 3%;
+    top: 35%;
+  }
+  .DesktopCompany {
+    display: none;
+  }
+  .MobileCompany {
+    display: block;
+  }
+  .MobilePayment {
+    display: block;
+  }
+  .DesktopPayment {
+    display: none;
+  }
 }

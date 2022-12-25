@@ -6,7 +6,6 @@
   top: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  z-index: 1000;
 }
 .menu-title {
   position: absolute;
@@ -61,7 +60,6 @@
   align-items: center;
   width: 100%;
   width: 100%;
-  z-index: 1000;
 }
 .AboutModal {
   position: fixed;
@@ -76,6 +74,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease-in-out;
+  z-index: 0;
 }
 .MenuList {
   position: absolute;
@@ -105,43 +104,54 @@
 }
 .CloseMenu {
   position: absolute;
-  width: 100%;
-  height: 100%;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   transition: all 0.5s ease-in-out;
+  opacity: 0;
   scale: 0;
 }
 .OffMenu {
-  opacity: 1;
   position: absolute;
-  z-index: 1000;
+  display: flex;
+  left: 85px;
+  opacity: 1;
   scale: 1;
+  z-index: 1000;
+  cursor: pointer;
 }
 .off-svg {
-  opacity: 0;
-  scale: 0;
+  opacity: 1;
+  scale: 1;
 }
-.MenuComp:hover .MenuSX {
+.OffMenu:hover .MenuSX {
   fill: white;
+  position: absolute;
+  z-index: 1000;
 }
-.MenuComp:hover .MenuSQ,
-.MenuComp:hover .MenuFX {
+.OffMenu:hover .MenuSQ,
+.OffMenu:hover .MenuFX {
   fill: black;
   stroke: black;
+  position: absolute;
+  z-index: 1000;
 }
 .MenuSX {
+  position: absolute;
+  z-index: 1000;
   fill: black;
   stroke: white;
   transition: all 0.5s ease-in-out;
 }
 .MenuSQ {
+  position: absolute;
+  z-index: 1000;
   fill: white;
   stroke: white;
   transition: all 0.5s ease-in-out;
 }
 .MenuFX {
+  position: absolute;
+  z-index: 1000;
   fill: white;
   stroke: white;
   transition: all 0.5s ease-in-out;
@@ -150,11 +160,14 @@
   .MenuComp {
     display: flex;
     position: fixed;
-    margin-top: 37px;
     left: 55px;
-    height: 100%;
+    top: 70px;
   }
   .menu-title {
     display: none;
+  }
+  .OffMenu {
+    left: 25px;
+    top: 45px;
   }
 }

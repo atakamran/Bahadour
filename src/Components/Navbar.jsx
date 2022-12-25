@@ -29,7 +29,9 @@ const Navbar = () => {
             <span className="nav-title reveal fade-bottom">Bahadour</span>
           ) : (
             <div className="NavLogo">
-              <NavLogo />
+              <a href="#">
+                <NavLogo />
+              </a>
             </div>
           )}
         </div>

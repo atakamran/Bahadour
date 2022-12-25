@@ -26,13 +26,15 @@ const Projects = (props) => {
     <>
       <div className="ProjectsContainer" id="Projects">
         <div className="ProjectCloud"></div>
-        <div className="ProjectsItems">
-          <CarouselProject>
-            {data.map((item, index) => {
-              return <div key={index}>{item}</div>;
-            })}
-          </CarouselProject>
-        </div>
+        <CarouselProject>
+          {data.map((item, index) => {
+            return (
+              <div className="ProjectsItems" key={index}>
+                {item}
+              </div>
+            );
+          })}
+        </CarouselProject>
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import "../Assets/css/footer.css";
 import "../Assets/css/BarAnimation.css";
 
 import Song from "../Assets/Afraid.flac";
+import { Navigate } from "react-router-dom";
 
 function Footer({ Below, BelowLink, FooterArrow }) {
   const [toggleState, setToggleState] = useState(0);
@@ -64,46 +65,48 @@ function Footer({ Below, BelowLink, FooterArrow }) {
     <>
       <div className="footer">
         <div className="Social-Footer-Svg">
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="37.2426"
-              y="25.7574"
-              width="6"
-              height="6"
-              transform="rotate(45 37.2426 25.7574)"
-              fill="#696969"
-            />
-            <rect
-              x="22.7574"
-              y="25.7574"
-              width="6"
-              height="6"
-              transform="rotate(45 22.7574 25.7574)"
-              fill="#696969"
-            />
-            <rect
-              x="34.2426"
-              y="37.2426"
-              width="6"
-              height="6"
-              transform="rotate(135 34.2426 37.2426)"
-              fill="#696969"
-            />
-            <rect
-              x="34.2426"
-              y="22.7574"
-              width="6"
-              height="6"
-              transform="rotate(135 34.2426 22.7574)"
-              fill="#696969"
-            />
-          </svg>
+          <a href="#Contact">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="37.2426"
+                y="25.7574"
+                width="6"
+                height="6"
+                transform="rotate(45 37.2426 25.7574)"
+                fill="#696969"
+              />
+              <rect
+                x="22.7574"
+                y="25.7574"
+                width="6"
+                height="6"
+                transform="rotate(45 22.7574 25.7574)"
+                fill="#696969"
+              />
+              <rect
+                x="34.2426"
+                y="37.2426"
+                width="6"
+                height="6"
+                transform="rotate(135 34.2426 37.2426)"
+                fill="#696969"
+              />
+              <rect
+                x="34.2426"
+                y="22.7574"
+                width="6"
+                height="6"
+                transform="rotate(135 34.2426 22.7574)"
+                fill="#696969"
+              />
+            </svg>
+          </a>
         </div>
         <div className="social-link">
           <a href="#contact">social</a>

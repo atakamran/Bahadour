@@ -1,11 +1,20 @@
 .CooprationContainer {
-  min-width: 100vh;
-  height: 100vh;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.CooprationDiv {
+  position: relative;
+  justify-content: center;
+  display: flex;
   overflow: hidden;
+  user-select: none;
+  width: 100%;
 }
 
 /*  */
@@ -19,9 +28,9 @@
 }
 .LeftArrow {
   position: absolute;
-  z-index: 55;
+  z-index: 100;
   bottom: 0;
-  right: 80%;
+  right: 85%;
   margin-top: 17.5%;
 }
 .LeftArrow svg {
@@ -32,8 +41,13 @@
 }
 .RightArrow {
   position: absolute;
-  z-index: 55;
+  z-index: 100;
   bottom: 0;
-  left: 80%;
+  left: 85%;
   margin-top: 17.5%;
+}
+@media screen and (max-width: 430px) {
+  .NavArrows {
+    top: 12.5%;
+  }
 }

@@ -1,5 +1,3 @@
-#loading-bar {
-}
 #loading-bar-left {
   -webkit-animation: loading-bar-morph 2s linear 0.4s infinite;
   animation: loading-bar-morph 2s linear 0.4s infinite;
@@ -25,10 +23,6 @@
   transform-origin: center;
   transition: all 0.5s ease-in-out;
 }
-
-@keyframes off-bar {
-}
-
 @-webkit-keyframes loading-bar-morph {
   0% {
     transform: scaleY(10);
@@ -43,7 +37,6 @@
     transform: scaleY(1.5);
   }
 }
-
 @keyframes loading-bar-morph {
   0% {
     transform: scaleY(10);
@@ -57,4 +50,4 @@
   75% {
     transform: scaleY(1.5);
   }
-} /*# sourceMappingURL=BarAnimation.css.map */
+}

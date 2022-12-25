@@ -61,6 +61,7 @@
   display: flex;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .ProductShadow {
   position: absolute;
@@ -68,7 +69,7 @@
   height: 143.44px;
   bottom: 0;
   background: rgba(0, 0, 0, 0.69);
-  z-index: 1000;
+  z-index: 100;
 }
 .ProductText {
   position: absolute;
@@ -118,12 +119,19 @@
   transition: all 0.5s ease-in-out;
   transform-origin: center;
 }
-.AddStroke {
-}
 .ProductAdd:hover .AddFill {
   fill: black;
   scale: 1.1;
 }
 .ProductAdd:hover .AddStroke {
   fill: white;
+}
+@media screen and (max-width: 430px) {
+  .ProductsSection .carousel-container .NavArrows {
+    display: none;
+  }
+  .Products {
+    width: 351px;
+    height: 525px;
+  }
 }
