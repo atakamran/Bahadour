@@ -1,5 +1,7 @@
 import "./App.css";
 
+import { Route, Routes } from "react-router-dom";
+
 import MenuComp from "./Components/MenuComp";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
@@ -11,6 +13,7 @@ import Coopration from "./Pages/Coopration/Coopration";
 import Products from "./Pages/Products/Products";
 import Contact from "./Pages/Contact/Contact";
 import { useEffect, useState } from "react";
+import ProjectsPage from "./Pages/Projects/ProjectsPage/ProjectsPage";
 
 // import { useEffect } from "react";
 
@@ -58,22 +61,34 @@ function App() {
           </svg>
         </div>
       ) : (
-        <div className="App">
-          <Navbar />
-          <>
-            <Home />
-            <About />
-            <Projects />
-            <Coopration />
-            <Products />
-            <Contact />
-          </>
-          <MenuComp Menu={"About"} />
-          <Footer Below={"About me"} BelowLink={"#Projects"} />
-        </div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="App">
+                <Navbar />
+                <>
+                  <Home />
+                  <About />
+                  <Projects />
+                  <Coopration />
+                  <Products />
+                  <Contact />
+                </>
+                <MenuComp Menu={"About"} />
+                <Footer Below={"About me"} BelowLink={"#Projects"} />
+              </div>
+            }
+          />
+          <Route path="/Product" element={<ProjectsPage />} />
+        </Routes>
       )}
     </>
   );
 }
 
 export default App;
+
+//
+//
+//

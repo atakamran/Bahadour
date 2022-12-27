@@ -11,12 +11,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  transition: all 0.5s ease-in-out;
 }
-.ButtonContainer:hover .ButtonPath,
-.ButtonContainer:hover {
-  color: black;
+.ButtonContainer:hover .ButtonPath {
   fill: white;
   fill-opacity: 1;
+}
+.ButtonContainer:hover .ButtonText {
+  color: black;
 }
 .ButtonPath {
   transform-origin: center;

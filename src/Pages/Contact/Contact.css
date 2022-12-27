@@ -1,6 +1,6 @@
 .ContactContainer {
   width: 100%;
-  height: 150vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -53,5 +53,8 @@
   }
   .TwitterComp {
     margin-left: 33px;
+  }
+  .ContactContainer {
+    height: 150vh;
   }
 }

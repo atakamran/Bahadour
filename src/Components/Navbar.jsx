@@ -25,11 +25,11 @@ const Navbar = () => {
           <a href="">search</a>
         </div>
         <div className="title-link">
-          {window.location.hash === "" ? (
+          {window.location.hash === "" && window.location.path === "" ? (
             <span className="nav-title reveal fade-bottom">Bahadour</span>
           ) : (
             <div className="NavLogo">
-              <a href="#">
+              <a href="/">
                 <NavLogo />
               </a>
             </div>

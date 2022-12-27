@@ -1,0 +1,89 @@
+.ClosePage {
+  position: fixed;
+  align-items: center;
+  left: 80px;
+  fill: rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  top: 50%;
+  z-index: 1000;
+}
+.ClosePage:hover rect {
+  fill: white;
+}
+.ClosePage:hover .ClosePageLine {
+  fill: black;
+}
+.Project_Div span {
+  color: white;
+  cursor: pointer;
+}
+.Project_Page {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Project_Title {
+  position: absolute;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  color: white;
+  z-index: 1000;
+  top: 30%;
+}
+.Project_Div {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.Project_Img {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 50px;
+}
+img {
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+}
+.Project_First {
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  top: 600px;
+}
+.Project_Details {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+}
+.Project_Title2 {
+  margin-top: 20px;
+}
+.Project_Share {
+  display: flex;
+}
+.Project_Second {
+  position: relative;
+  color: rgba(154, 154, 154, 1);
+  font-size: 11px;
+  display: flex;
+  width: 100%;
+  top: 800px;
+}
+.Project_Img2 {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 1000px;
+}

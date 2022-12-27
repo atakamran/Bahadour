@@ -30,7 +30,7 @@ const Projects = (props) => {
           {data.map((item, index) => {
             return (
               <div className="ProjectsItems" key={index}>
-                {item}
+                <a href="/Product">{item}</a>
               </div>
             );
           })}
